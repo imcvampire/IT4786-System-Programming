@@ -12,8 +12,8 @@ int main() {
 
   if (mem_pointer != NULL) {
     sprintf(mem_pointer, "Hello world!");
-    printf("%s \n", mem_pointer);
-    printf("%p \n", mem_pointer);
+    printf("Var value: %s \n", mem_pointer);
+    printf("Var address: %p \n", mem_pointer);
 
     return 0;
   }
