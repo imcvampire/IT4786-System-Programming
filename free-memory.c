@@ -1,11 +1,10 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-int main()
-{
-  char* mem_pointer;
-  mem_pointer = (char*)malloc(1);
+int main() {
+  char *mem_pointer;
+  mem_pointer = (char *)malloc(1);
   if (mem_pointer != NULL) {
     printf("Pointer address: %p \n", mem_pointer);
     free(mem_pointer);

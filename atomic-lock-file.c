@@ -1,10 +1,10 @@
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <fcntl.h>
 #include <errno.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-const char* lock_file = "/tmp/demo-lock-file";
+const char *lock_file = "/tmp/demo-lock-file";
 
 int main() {
   int file_desc;

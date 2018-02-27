@@ -1,14 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-#define A_MEGABYTE (1024*1024)
+#define A_MEGABYTE (1024 * 1024)
 
 int main() {
-  char* mem_pointer;
+  char *mem_pointer;
   int megabyte = A_MEGABYTE;
 
-  mem_pointer = (char*) malloc(megabyte);
+  mem_pointer = (char *)malloc(megabyte);
 
   if (mem_pointer != NULL) {
     sprintf(mem_pointer, "Hello world!");

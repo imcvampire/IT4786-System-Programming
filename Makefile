@@ -31,10 +31,16 @@ free-memory: free-memory.c
 .PHONY: memory memory-allocation large-memory-allocation bad-memory-allocation free-memory
 
 
-lock-file: atomic-lock-file
+lock-file: atomic-lock-file segment-file-locking segment-file-testing
 
 atomic-lock-file: atomic-lock-file.c
 	$(CXX) -o $(OUT_DIR)/atomic-lock-file atomic-lock-file.c
+
+segment-file-locking: segment-file-locking.c
+	$(CXX) -o $(OUT_DIR)/segment-file-locking segment-file-locking.c
+
+segment-file-testing: segment-file-testing.c
+	$(CXX) -o $(OUT_DIR)/segment-file-testing segment-file-testing.c
 
 .PHONY: lock-file atomic-lock-file
 
