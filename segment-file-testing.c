@@ -7,8 +7,7 @@ const char *test_file = "/tmp/test_segment_lock";
 
 #define SIZE_TO_TRY 5
 
-void show_lock_info(struct flock *to_show)
-{
+void show_lock_info(struct flock *to_show) {
   printf("\tl_type %d, ", to_show->l_type);
   printf("l_whence %d, ", to_show->l_whence);
   printf("l_start %d, ", (int)to_show->l_start);
@@ -16,8 +15,7 @@ void show_lock_info(struct flock *to_show)
   printf("l_pid %d\n", to_show->l_pid);
 }
 
-int main()
-{
+int main() {
   int file_desc;
   int res;
   int start_byte;

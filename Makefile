@@ -39,8 +39,9 @@ atomic-lock-file: atomic-lock-file.c
 segment-file-locking: segment-file-locking.c
 	$(CXX) -o $(OUT_DIR)/segment-file-locking segment-file-locking.c
 
-segment-file-testing: segment-file-testing.c
+segment-file-testing: segment-file-testing.c segment-file-testing-2.c
 	$(CXX) -o $(OUT_DIR)/segment-file-testing segment-file-testing.c
+	$(CXX) -o $(OUT_DIR)/segment-file-testing-2 segment-file-testing-2.c
 
 .PHONY: lock-file atomic-lock-file
 
