@@ -3,7 +3,7 @@ OUT_DIR=bin
 
 MKDIR_P=mkdir -p
 
-all: directories memory lock-file
+all: clean directories memory lock-file
 
 directories: ${OUT_DIR}
 
@@ -28,8 +28,10 @@ bad-memory-allocation: bad-memory-allocation.c
 free-memory: free-memory.c
 	$(CXX) -o $(OUT_DIR)/free-memory free-memory.c
 
-memory-reallocation: memory-reallocation.c
+memory-reallocation: memory-reallocation.c memory-reallocation-better.c memory-reallocation-best.c
 	$(CXX) -o $(OUT_DIR)/memory-reallocation memory-reallocation.c
+	$(CXX) -o $(OUT_DIR)/memory-reallocation-better memory-reallocation-better.c
+	$(CXX) -o $(OUT_DIR)/memory-reallocation-best memory-reallocation-best.c
 
 .PHONY: memory memory-allocation large-memory-allocation bad-memory-allocation free-memory
 
@@ -49,4 +51,4 @@ segment-file-testing: segment-file-testing.c segment-file-testing-2.c
 .PHONY: lock-file atomic-lock-file
 
 clean:
-	rm -rf dist
+	rm -rf $(OUT_DIR)
