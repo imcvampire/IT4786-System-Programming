@@ -14,7 +14,7 @@ ${OUT_DIR}:
 	${MKDIR_P} ${OUT_DIR}
 
 
-memory: memory-allocation large-memory-allocation bad-memory-allocation free-memory memory-reallocation segment-fault
+memory: memory-allocation large-memory-allocation bad-memory-allocation free-memory memory-reallocation segment-fault null-pointer
 
 memory-allocation: memory-allocation.c
 	$(CXX) -o $(OUT_DIR)/memory-allocation memory-allocation.c
@@ -35,6 +35,9 @@ memory-reallocation: memory-reallocation.c memory-reallocation-better.c memory-r
 
 segment-fault: segment-fault.c
 	$(CXX) -o $(OUT_DIR)/segment-fault segment-fault.c
+
+null-pointer: null-pointer.c
+	$(CXX) -o $(OUT_DIR)/null-pointer null-pointer.c
 
 .PHONY: memory memory-allocation large-memory-allocation bad-memory-allocation free-memory
 
